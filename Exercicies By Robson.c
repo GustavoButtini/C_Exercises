@@ -383,7 +383,6 @@ int Exercise12(){
 
 // Exercise13 - Insert the time worked and the value for hour, betweem 40 hours and 60 hours, give an 50% bonus per hour, abose 60 hours, an 100% bonus.
 
-
 /*
 
 void Exercise13(){
@@ -570,6 +569,208 @@ void Exercise18(){
 
 */
 
+//Exercise 19 - Insert all "perfects numbers" up 1 to 100. (Perfect numbers are those integer ones that their diviors add is equal the double of the number)
+
+/*
+
+void Exercise19(){
+	int num = 1;
+	int soma = 0;
+	while (num <= 100){
+		for(int i = 1; i <= num/2; i++){
+			if(num%i == 0){
+				soma += i;	
+			}
+		}
+		if(soma == num*2){
+			printf("The number %d, is a perfect number !",num);
+		}
+		num++;
+	}
+} 
+
+
+*/
+
+
+//Exercise 20 - Take a number and see if is a Prime number
+
+
+/*
+
+void Exercise20(){
+	int num, i, prm = 0;
+	printf("Enter an number to see if is Prime ! \n");
+	scanf("%d", &num);
+	for(i = 0; i <= num; i++){
+		if(num % i == 0){
+			if (i == 1 || i == num){
+				prm ++;
+			}
+		}
+	}
+	if(prm == 2){
+		printf("Your number is Prime !");
+	}else{
+		printf("Your number is not Prime !");
+	}
+}
+
+
+*/
+
+//Exercise 21 - Calculate the parabolic trajetory of an object (Like exercise 4, but show the horizontal and the vertical position in every .10s.
+
+//Cannot Make: Not know how implement Parabolic Trajectory formula.
+
+/*
+
+void Exercise21(){
+	typedef direction {up,down} boolean;
+	int voy, g, t, vox,  V = 0;
+	float syt, vyt, ts, sxt, h = 0;
+	
+	//Vertical Calc
+	if (direction == up){
+		syt = voy * t 	+ (g/2)*(t^2);
+		vyt = voy + (g*t);
+		ts =  voy/g;
+	}
+	
+	//Horizontal Calc
+	sxt = vox * t
+	vox = 
+}
+
+*/
+
+//Exercise 22 - calculate the Quocient and the rest of an Division, using only subtract an add.
+
+/*
+
+void Exercise22(){
+	int n1,n2,q,r = 0;
+	printf("Type the value of the number will be divided \n");
+	scanf("%d", &n1);
+	printf("\nType the value of the number that will divide \n");
+	scanf("%d", &n2);
+	while(n1 >= n2){
+		q++;
+		n1 = n1 - n2;
+	}
+	if(n1 != 0){
+		r = n1;
+	}else{
+		r = 0;
+	}
+	printf("\n Quocient = %d, rest = %d", q, r);
+}
+
+*/
+
+// Exercise 23 - Decompose the number with prime numbers. (Incomplete - need to insert all prime numbers, will consume too much lines)
+
+/*
+
+void Exercise23(){
+	int j,number = 0;
+	printf("Type the number that will be divided \n");
+	scanf("%d", &number);
+	if ((number%2) == 0){
+		number = number / 2;
+		printf("Base number as been divided");
+	} 
+	for (int i = 0 ;number != 0;i++){
+		if(number != 1){
+			printf("Lets divid");
+			if((number%3) == 0){
+				printf("\n - Number %d divided by 3 - \n");
+				number = number / 3;
+			}else if((number%5) == 0){
+				printf("\n -  Number %d divided by 5 - \n");
+				number = number / 5;
+			}else if((number%7) == 0){
+				printf("\n - Number %d divided by 7 - \n");
+				number = number / 7;
+			}else if((number%9) == 0){
+				printf("\n - Number %d divided by 9 - \n");
+				number = number / 9;
+			}else if((number%11) == 0){
+				printf("\n - Number %d divided by 11 - \n");
+				number = number / 11;
+			}else if((number%13) == 0){
+				printf("\n - Number %d divided by 13 - \n");
+				number = number /13;
+			}else if((number%15) == 0){
+				printf("\n - Number %d divided by 15 - \n");
+				number = number /15;
+			}else{
+				printf("\n - Number cant be divided by an prime number, has been divided by 2 - \n");
+				number = number /2;
+			}
+		}else{
+			printf("\n - The division has ended with the rest = 1 !, the division has occured %d times ! - \n", i);
+			break;
+		}
+	}
+}
+
+
+*/
+
+// Exercise 24 - Using the Euclides method,  calculate the Maximum Common Divisor;
+
+/*
+
+void Exercise24(){
+	int n1,n2,c,r = 0;
+	printf("Type the First number of the MCD \n");
+	scanf("%d", &n1);
+	printf("\nType the Second number of the MCD \n");
+	scanf("%d", &n2);
+	while (n2 > 0){
+		c = n1%n2;
+		n1 = n2;
+		n2 = c;
+	}
+	r = n1;
+	printf("\n - The MCD is %d !", r);
+}
+
+*/
+
+//Exercise 25 - Calculate the Minimal Common Multipier (MCM) of 2 numbers !;
+
+//Code inspired by Henrique Felipe (GitHub: HenriqueIni), thanks !
+
+/*
+
+void Exercise25(){
+	int n1,n2, calc = 0;
+	printf("Type the fist number\n");
+	scanf("%d", &n1);
+	printf("\nType the second number\n");
+	scanf("%d", &n2);
+	int Cal (n1,n2){
+		while(n2 != 0){
+			int r = n1 + n2;
+			n1 = n2;
+			n2 = r;
+			return n1;
+		}	
+	}
+	calc = n1 * (n2 / Cal(n1,n2));
+	printf("The mmc is %d", calc);
+}
+
+*/
+
+//Exercise 26 - A is twice as old as B was when A was as old as B is. When B is the age of A, they will add up to 81 years, Try by brute force to find the age of both
+
+void Exercise26(){
+	int a,b = 0;
+	
+}
 int main(void){
 	setlocale(LC_ALL, "Portuguese");
 	//Start exercise 1 delete here --> //Exercise1();
@@ -589,5 +790,12 @@ int main(void){
 	//Start exercise 16 delete here --> //Exercise16();
 	//Start exercise 17 delete here --> //Exercise17();
 	//Start exercise 18 delete here --> //Exercise18();
-	Exercise19();
+	//Start exercise 19 delete here --> //Exercise19();
+	//Start exercise 20 delete here --> //Exercise20();
+	//Start exercise 21 delete here --> //Exercise21();
+	//Start exercise 22 delete here --> //Exercise22();
+	//Start exercise 23 delete here --> //Exercise23();
+	//Start exercise 24 delete here --> //Exercise24();
+	//Start exercise 25 delete here --> //Exercise25();
+	Exercise26();
 }
